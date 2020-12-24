@@ -29,21 +29,21 @@
     <li class="nav-item">
       <a class="nav-link" routerLink="/expenses-income">
         <i class="menu-icon fa fa-clipboard-list"></i>
-        <span class="menu-title">Ingresos y Egresos</span>
+        <span class="menu-title">Expenses and income</span>
       </a>
     </li>
 
     <li class="nav-item">
       <a class="nav-link" routerLink="detail">
         <i class="menu-icon fa fa-table"></i>
-        <span class="menu-title">Detalle</span>
+        <span class="menu-title">Detail</span>
       </a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link cursor" routerLink="/login">
+      <a class="nav-link cursor" (click)="logout()">
         <i class="menu-icon fa fa-sign-out-alt"></i>
-        <span class="menu-title">Cerrar sesión</span>
+        <span class="menu-title">Logout</span>
       </a>
     </li>
     
