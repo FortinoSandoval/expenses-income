@@ -14952,6 +14952,7 @@ ul {
     .auth.theme-one .auto-form-wrapper .form-group .input-group .input-group-append {
       border-left: none; }
       .auth.theme-one .auto-form-wrapper .form-group .input-group .input-group-append .input-group-text {
+        height: 38px;
         border-radius: 0 6px 6px 0;
         border-left: none;
         border-color: #e5e5e5;

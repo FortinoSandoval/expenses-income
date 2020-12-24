@@ -118,8 +118,13 @@
               "devServerTarget": "expenses-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "expenses-app"
 }

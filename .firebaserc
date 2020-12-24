@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "expenses-income": {
+      "hosting": {
+        "expenses-app": [
+          "expenses-income"
+        ]
+      }
+    }
+  }
+}
