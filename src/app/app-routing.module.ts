@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   },
   {
     path: '',
+    canLoad: [AuthGuard],
     loadChildren: () => import('./expenses-income/expenses-income.module').then(m => m.ExpensesIncomeModule)
   },
   {
