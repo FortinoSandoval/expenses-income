@@ -31,13 +31,13 @@ import { SharedModule } from './shared/shared.module';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    AuthModule,
+    SharedModule,
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
     }),
-    AuthModule,
-    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
