@@ -5,6 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { environment } from 'src/environments/environment';
 
+// Chartjs
+import { ChartsModule } from 'ng2-charts';
+
 // Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -26,6 +29,7 @@ import { DetailComponent } from './expenses-income/detail/detail.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { OrderIncomePipe } from './expenses-income/pipes/order-income.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     DetailComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrderIncomePipe
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
-    })
+    }),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

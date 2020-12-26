@@ -4,11 +4,13 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Store } from '@ngrx/store';
 import { AppState } from '../app.reducer';
-import * as auth from '../auth/auth.actions';
 
 import { map } from 'rxjs/operators';
-import { User } from '../models/user.model';
 import { Subscription } from 'rxjs';
+
+import { User } from '../models/user.model';
+import * as auth from '../auth/auth.actions';
+import * as expenseIncome from '../expenses-income/expenses-income.actions';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +32,7 @@ export class AuthService {
       } else {
         this._user = null;
         this.store.dispatch(auth.unsetUser());
+        this.store.dispatch(expenseIncome.unsetItems());
         if (this.userSubscription) {
           this.userSubscription.unsubscribe();
         }
