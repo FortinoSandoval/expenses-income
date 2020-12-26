@@ -11,7 +11,8 @@
 
           <div class="form-group">
             <label>Description</label>
-            <input type="text" class="form-control" placeholder="Description" name="description" formControlName="description">
+            <input type="text" class="form-control" placeholder="Description" name="description"
+              formControlName="description">
           </div>
 
           <div class="form-group">
@@ -25,13 +26,16 @@
           <div class="form-group">
             <label>Type</label>
             <br>
-            <button *ngIf="type === 'income'" (click)="type = 'expense'" type="button" class="btn btn-primary btn-block">Income</button>
-            <button *ngIf="type === 'expense'" (click)="type = 'income'" type="button" class="btn btn-warning btn-block">Expense</button>
+            <button *ngIf="type === 'income'" (click)="type = 'expense'" type="button"
+              class="btn btn-primary btn-block">Income</button>
+            <button *ngIf="type === 'expense'" (click)="type = 'income'" type="button"
+              class="btn btn-warning btn-block">Expense</button>
           </div>
 
           <hr>
-          <button type="submit" class="btn btn-success mr-2" [disabled]="incomeForm.invalid">
-            <i class="fa fa-save"></i>
+          <button type="submit" class="btn btn-success mr-2" [disabled]="incomeForm.invalid || isLoading">
+            <i class="fa fa-save" *ngIf="!isLoading"></i>
+            <i class="fa fa-spin fa-sync" *ngIf="isLoading"></i>
             Add
           </button>
 
